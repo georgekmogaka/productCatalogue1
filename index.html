@@ -9,7 +9,38 @@
 
 </head>
 <body>
+  <div id="preogressbar"></div>
+  <div id="scrollpath"></div>
+  <div id="percent"></div>
+  <script type="text/javascript">
+  var preogressbar = document.getElementById("preogressbar");
+  var percent = document.getElementById("percent");
+  var  totalHeight = document.body.scrollHeight - window.innerHeight;
+  window.onscroll = function(){
+    var progress = (window.pageYOffset / totalHeight)* 100;
+    preogressbar.style.height = progress + "%";
+  }
+  </script>
+  
   <div class="container">
+    <div class="box">
+      <div class="content">
+        <img src="imgs/mpesa.png" class="img-responsive">
+        <p>Mobile money Transfer</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="content">
+        <img src="imgs/mpesa.png" class="img-responsive">
+        <p>Mobile money Transfer</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="content">
+        <a href=""><img src="imgs/mpesa.png" class="img-responsive"></a>
+        <p>Mobile money Transfer</p>
+      </div>
+    </div>
     <div class="box">
       <div class="content">
         <img src="imgs/mpesa.png" class="img-responsive">

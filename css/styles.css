@@ -1,5 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik',sans-serif;
+}
+
+#scrollpath {
+  position: fixed;
+  top :0;
+  right:0;
+  width:0;
+  height: 0;
+  background: rgba(255,255,255,0.05);
+}
+#preogressbar {
+  position: fixed;
+  top:0;
+  right: 0;
+  width: 10%;
+  height: 50%;
+  background: linear-gradient(to top,#008aff, #00ffe7);
+  animation: animate 5s linear infinite;
+}
+
+#preogressbar:before,
+#preogressbar:after {
+content :'';
+position: absolute;
+top:0;
+left: 0;
+width: 100%;
+height: 100%;
+background: repeating-linear-gradient(to top,#008aff, #00ffe7);
+filter:  blur(10px);
+}
+#preogressbar:after {
+  filter: blur (30px);
+}
+@keyframes animate {
+   0%, 100%
+   {
+     filter: hue-rotate (0deg)
+   
+   }
+   50%{
+     filter:  hue-rotate(360deg);
+   }
+}
+ ::-webkit-scrollbar
 body {
-  background-color: #f4f4f4;
+
 display: flex;
 justify-content: center;
 align-self: center ;
@@ -11,10 +62,11 @@ background: #222;
   position: relative;
   max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-  grid-template-rows: minmax(100px,auto);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: minmax(100px, auto);
   margin: 40px;
   grid-auto-flow: dense;
+  grid-gap: 10px;
 
 }
 .container .box {
@@ -23,10 +75,47 @@ padding: 20px;
 display: grid;
 font-size: 20px;
 place-items:center;
+text-align: center;
 color:#fff;
 transition: 0.5s;
 }
 
-.container .box:hover{
-  background-size: #e91e63;
+.container .box:hover
+{
+  background: #e91e63;
+}
+
+.container .box img{
+  position: relative ;
+  /* max-width: 100px; */
+  margin-bottom: 10px;
+}
+
+.container .box:nth-child(1){
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.container .box:nth-child(2){
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.container .box:nth-child(4){
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.container .box:nth-child(5){
+  grid-column: span 3;
+  grid-row: span 1;
+}
+@media (max-width:991px){
+  .container{
+  
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    grid-template-rows: minmax(auto, auto);
+ 
+  }
+  .container .box{
+    grid-column:  unset !important;
+    grid-row: unset !important;
+  }
 }
