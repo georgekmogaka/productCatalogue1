@@ -17,9 +17,16 @@ background: #222;
   grid-auto-flow: dense;
 
 }
-.container.box {
+.container .box {
 background: #333;
 padding: 20px;
 display: grid;
 font-size: 20px;
+place-items:center;
+color:#fff;
+transition: 0.5s;
+}
+
+.container .box:hover{
+  background-size: #e91e63;
 }
