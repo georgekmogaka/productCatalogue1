@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Bonga</title>
+
+</head>
+<style>
+  body{
+ overflow: hidden;
+ background: #000;
+ height: 100vh;
+  }
+
+  span{
+    position: absolute;
+    background:  url(heart.png);
+    pointer-events: none;
+    transform: translate( -50%, -50%);
+    width:  100px;
+    height: 100px;
+    background-size: cover;
+    animation:  animate 2s linear infinite;
+  }
+
+  @keyframes amimate
+  {
+
+    0% 
+    {
+      transform:  translate( -50%, -50%);
+      opacity: 1;
+      filter:  hue-rotate(0deg);
+    }
+    100% 
+    {
+      transform:  translate( -50%, -1000%);
+      opacity: 0;
+      filter:  hue-rotate(720deg);
+    }
+    }
+  
+ 
+</style>
+
+
+<body>
+
+
+  <script type="text/javascript">
+    document.addEventListener("mouseover" , function(e){
+      var body = document.querySelector('body');
+      var heart = document.createElement("span");
+      var x = e.offsetX ;
+      var y = e.offsetY ;
+
+      heart.style.left =  x+ 'px';
+      heart.style.top = y+ 'px';
+
+      var size = Math.random() * 100;
+
+      heart.style.width = size+ 'px';
+      heart.style.height = size+ 'px';
+
+      body.appendChild(heart);
+
+      setTimeout(function(){
+        heart.remove();
+      }, 2000);
+    })
+  </script>
+</body>
+</html>
