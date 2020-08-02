@@ -2,11 +2,65 @@
 <html>
 <head>
   <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="css/styleee.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/scripts.js"></script>
   <title>Safaricom Dynamic & Interactive Product Catalogue</title>
+<style>
+  * {
+    margin:  0;
+    padding:  0;
+    
+    font-family: "Rubik", sans-serif;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    min-height:  100vh;
+    background: #222;
+  }
+  .container {
+    position: relative;
+    max-width: 100%;
+    display: grid ;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows:  minmax(100px, auto);
+    margin: 40px;
+    grid-auto-flow: dense;
+    grid-gap :10px;
+  }
+  .container .box{
+    background: #333;
+    padding: 20px;
+    display: grid;
+    font-size: 20px;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    transform: 0.5s;
+  }
 
+  .container .box:hover {
+    background: #e91e63;
+  }
+
+  .container .box img{
+    position: relative;
+    max-width:  100px;
+    margin-bottom:10px ;
+  }
+  
+  .container .box:nth-child(2){
+    grid-column:  span 2;
+    grid-row:  span 1;
+  }
+    .container .box:nth-child(2){
+    grid-column:  span 2;
+    grid-row:  span 1;
+  }
+  
+</style>
 </head>
 <body>
 
@@ -56,6 +110,6 @@
       </div>
     </div>
   </div>
-  Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+  
 </body>
 </html>
