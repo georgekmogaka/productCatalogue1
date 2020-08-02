@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Intro</title>
+  <style>
+    body{
+      background: #000;
+    }
+  *{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section img{
+  
+    top:0;
+    left: 0;
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+
+  }
+  section h2 {
+    position: relative;
+    color: #fff;
+    font-size: 12em;
+  }
+  div {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+        
+}
+ 
+  </style>
+</head>
+
+<body>
+  <section>
+  <div> <a href="m-pesa.html"><img src="imgs/mpesa.png" data-speed="6" class="layer"></a></div> 
+  <div> <a href="tea.html"><img src="imgs/radar.png"  data-speed="4" class="layer"></a></div> 
+  <div>  <a href="mounts.html"><img src="imgs/ice-cream.png" data-speed="-5" class="layer"></a></div> 
+   <a href="beach.html"> <h2 class="layer" data-speed="2">Parallax</h2></a>
+  </section>
+<script type ="text/javascript">
+  document.addEventListener("mousemove", parallax);
+  function parallax(e) {
+    this.querySelectorAll('.layer').forEach(layer =>{
+      const speed = layer.getAttribute('data-speed')
+      const x =  (window.innerWidth - e.pageX*speed)/100
+      const y =  (window.innerHeight - e.pageY*speed)/100
+
+      layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+    })
+  }
+</script>
+
+<script type="text/javascript">
+// collect all the divs
+var divs = document.getElementsByTagName('div');
+// get window width and height
+var winWidth = window.innerWidth;
+var winHeight = window.innerHeight;
+
+// i stands for "index". you could also call this banana or haircut. it's a variable
+for ( var i=0; i < divs.length; i++ ) {
+ 	
+    // shortcut! the current div in the list
+    var thisDiv = divs[i];
+    
+    // get random numbers for each element
+    randomTop = getRandomNumber(0, winHeight);
+    randomLeft = getRandomNumber(0, winWidth);
+    
+    // update top and left position
+    thisDiv.style.top = randomTop +"px";
+    thisDiv.style.left = randomLeft +"px";
+    
+}
+
+// function that returns a random number between a min and max
+function getRandomNumber(min, max) {
+    
+  return Math.random() * (max - min) + min;
+    
+}
+</script>
+</body>
+</html>
