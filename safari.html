@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Safaricom Dynamic & Interactive Product Catalogue</title>
+  <style>
+.main {
+  padding-top: 100px;
+}
+.inner-main{
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  margin: 20px;
+  padding: 20px;
+  -webkit-box-shadow: 11px 10px 59px -32px rgba(0,0,0,0.68);
+  -moz-box-shadow: 11px 10px 59px -32px rgba(0,0,0,0.68);
+  box-shadow: 11px 10px 59px -32px rgba(0,0,0,0.68);
+}
+.inner-inner-main{
+  cursor: pointer;
+  margin: 15px 0;
+  padding-top: 10px;
+}
+.cats{
+  padding-left: 50px;
+}
+.cat-img{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+  </style>
+
+<style>
+  .inner-inner-main{
+      background: ;
+  }
+  .cats.highlight{
+      background: rgb(196, 250, 205);
+  }
+  body {
+    background: url(imgs/sky.png);
+    background-size: cover;
+    
+  }
+</style>
+</head>
+<body>
+  <div class ="col-lg-4  col-lg-offset-4 main">
+    <h1 style =text-align:center;color:white;>Safari na SAFIS</h1>
+    <div class="col-lg-12 inner-main">
+      <h3 style=text-align:center;>Welcome, Select a Tour!</h3>
+       <div class=" inner-inner-main">
+        <div class="col-lg-12"  style =text-align:center;>
+          <h4 class="cats"><a href="jet.html">Tour M-PESA</a></h4>
+       
+          <h4 class="cats"><a href="data.html">Tour DATA</a></h4>
+      
+          <h4 class="cats"><a href="mounts.html">Tour CALLS</a></h4>
+        
+          <h4 class="cats"><a href="space.html">Tour SMS</a></h4>
+
+          <h4 class="cats"><a href="ftth.html">Tour Home Fiber</a></h4>
+
+          <h4 class="cats"><a href="diaspora.html">Tour Diaspora</a></h4>
+
+          <a href="promos.html">
+            <div class="thumb">
+              <img src="imgs/promos.jpg" class="img-responsive">
+            </div>
+            </a>
+      
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+        $(".cats").hover(function(){
+            $(this).addClass("highlight");
+        }, function(){
+            $(this).removeClass("highlight");
+        });
+    });
+    </script>
+</body>
+</html>
