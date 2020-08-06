@@ -24,6 +24,16 @@
 
     header h1 {
       font-size: 60px;
+      color: #39b54a;
+    }
+    header h3 {
+      font-size: 40px;
+      color: #39b54a;
+    }
+
+    footer h1 {
+      font-size: 40px;
+      color: #39b54a;
     }
 
     .animation {
@@ -38,19 +48,181 @@
       top: 50%;
       left: 0%;
     }
+
+    .containerx{
+      width: 1280px;
+      margin: 70px auto 0;
+      background: #fff;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .containerx .box {
+      position : relative;
+      width: 300px;
+      height: 300px ;
+      background: #fff;
+      margin: 10px;
+      box-sizing: border-box;
+      display: inline-block;
+    }
+    .containerx .box .imgBox {
+      
+      position: relative;
+      overflow:hidden ;
+      
+    } 
+    .containerx .box .imgBox img{
+      max-width: 100%;
+      
+      transition:  transform 2s;
+    }
+    .containerx .box:hover .imgBox img{
+      transform: scale(1.2);
+
+    }
+    .containerx .box .details {
+      position: absolute;
+      top:10px;
+      left:10px;
+      bottom: 10px;
+      right:10px;   
+      background:rgba(0,0,0,.8);
+      transform: scaleY(0);
+      transition: transform .5s ;
+    }
+
+    .containerx .box:hover .details {
+      transform:  scaleY(1);
+    }
+    .containerx .box .details .content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      padding: 15px;
+      color: #fff;
+    }
+    .containerx .box .details .content h2{
+      margin: 0;  
+      padding: 0;
+      font-size: 20px;
+      color: #ff0;
+    }
+    .containerx .box .details .content p{
+      margin:  10px 0 0;
+      padding: 0;
+      text-align: center;
+      
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Scroll Animation</h1>
+    <div class="container text-center">
+      <h1>SIMPLE . TRANSPARENT . HONEST</h1>
+      <h3>For You</h3>
+    </div>
+    
   </header>
   <section class="animation">
     <img src="imgs/Paper plane PNG_files/paper_plane_PNG79.png" alt="paper-plane" class="paper-plane">
   </section>
 
   <footer>
-    <h1>Woow!</h1>
+    <h1>Take Your Tour</h1>
+  
   </footer>
+  <div class=" containerx">
+    <a href=""><div class="box">
+      <div class="imgBox">
+        <img src="imgs/tea.jpg"> 
+      </div>
+      <div class="details">
+        <div class="content">
+        
+        <p> M-PESA </p>
+      </div>
+     </div>
+    </div></a>
+    <a href=""><div class="box">
+      <div class="imgBox">
+        <img src="imgs/tea.jpg"> 
+      </div>
+      <div class="details">
+        <div class="content">
+        
+        <p> M-PESA </p>
+      </div>
+     </div>
+    </div></a>
+    <a href=""><div class="box">
+      <div class="imgBox">
+        <img src="imgs/tea.jpg"> 
+      </div>
+      <div class="details">
+        <div class="content">
+        
+        <p> M-PESA </p>
+      </div>
+     </div>
+    </div></a>
+    <a href=""><div class="box">
+      <div class="imgBox">
+        <img src="imgs/tea.jpg"> 
+      </div>
+      <div class="details">
+        <div class="content">
+        
+        <p> M-PESA </p>
+      </div>
+     </div>
+    </div></a>
+    <a href=""><div class="box">
+      <div class="imgBox">
+        <img src="imgs/tea.jpg"> 
+      </div>
+      <div class="details">
+        <div class="content">
+        
+        <p> M-PESA </p>
+      </div>
+     </div>
+    </div></a>
+    <a href=""><div class="box">
+      <div class="imgBox">
+        <img src="imgs/tea.jpg"> 
+      </div>
+      <div class="details">
+        <div class="content">
+        
+        <p> M-PESA </p>
+      </div>
+     </div>
+    </div></a>
+    <a href=""><div class="box">
+      <div class="imgBox">
+        <img src="imgs/tea.jpg"> 
+      </div>
+      <div class="details">
+        <div class="content">
+        
+        <p> M-PESA </p>
+      </div>
+     </div>
+    </div></a>
+    <a href=""><div class="box">
+      <div class="imgBox">
+        <img src="imgs/tea.jpg"> 
+      </div>
+      <div class="details">
+        <div class="content">
+        
+        <p> M-PESA </p>
+      </div>
+     </div>
+    </div></a>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>

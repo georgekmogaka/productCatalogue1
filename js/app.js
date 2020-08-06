@@ -28,7 +28,7 @@ const flightPath = {
     duration: 1000,
     triggerHook: 0
   })
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller)
   .setPin('.animation')
   .setTween(tween)
